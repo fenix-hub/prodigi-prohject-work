@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.3.1">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.3.1">
   <collaboration id="Collaboration_029jmew">
     <participant id="Participant_1w0bi6i" name="TECNARREDO" processRef="Process_1" />
     <participant id="Participant_14ehx3v" name="CLIENTE TOP" processRef="Process_0dpw1am" />
@@ -92,6 +92,10 @@
           <sourceRef>DataStoreReference_12u4wl3</sourceRef>
           <targetRef>Property_1vsyeot</targetRef>
         </dataInputAssociation>
+        <dataInputAssociation id="DataInputAssociation_00wcvqt">
+          <sourceRef>DataObjectReference_1k2u801</sourceRef>
+          <targetRef>Property_1vsyeot</targetRef>
+        </dataInputAssociation>
       </userTask>
       <exclusiveGateway id="Gateway_0vdeoeb" name="Analisi dei risultati">
         <incoming>Flow_1lfes1q</incoming>
@@ -169,6 +173,8 @@
         <incoming>Flow_1d72pw8</incoming>
         <escalationEventDefinition id="EscalationEventDefinition_06vokjc" />
       </endEvent>
+      <dataObjectReference id="DataObjectReference_1k2u801" name="AGGANCI.xls" dataObjectRef="DataObject_1o6ep8y" />
+      <dataObject id="DataObject_1o6ep8y" />
     </subProcess>
     <boundaryEvent id="Event_1njw8rr" name="Attesa di 48H" attachedToRef="Activity_04soivp">
       <outgoing>Flow_1kscir9</outgoing>
@@ -295,15 +301,6 @@
       <bpmndi:BPMNShape id="Gateway_0s7663v_di" bpmnElement="Gateway_0s7663v" isMarkerVisible="true">
         <omgdc:Bounds x="1005" y="1185" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_19sncz3_di" bpmnElement="Event_16pk9w3">
-        <omgdc:Bounds x="1382" y="1192" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="1373" y="1235" width="56" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0x94fyx_di" bpmnElement="Activity_11zffyk">
-        <omgdc:Bounds x="1150" y="1170" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_13pve7v_di" bpmnElement="Activity_04soivp" isExpanded="true">
         <omgdc:Bounds x="670" y="660" width="2580" height="430" />
         <bpmndi:BPMNLabel />
@@ -342,7 +339,7 @@
         <omgdc:Bounds x="1460" y="840" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1lqbyrw" bpmnElement="Activity_1dyt5qd">
+      <bpmndi:BPMNShape id="BPMNShape_1lqbyrw" bpmnElement="Activity_1dyt5qd" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <omgdc:Bounds x="1620" y="840" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
@@ -352,16 +349,16 @@
           <omgdc:Bounds x="1766" y="915" width="88" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0hs4htg" bpmnElement="DataObjectReference_1qrcjh6">
+      <bpmndi:BPMNShape id="BPMNShape_0hs4htg" bpmnElement="DataObjectReference_1qrcjh6" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <omgdc:Bounds x="2032" y="755" width="36" height="50" />
         <bpmndi:BPMNLabel>
           <omgdc:Bounds x="2005" y="705" width="89" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_199zf09" bpmnElement="Activity_051ited">
+      <bpmndi:BPMNShape id="BPMNShape_199zf09" bpmnElement="Activity_051ited" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <omgdc:Bounds x="2000" y="840" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_17nyg3t" bpmnElement="Activity_0q500dv">
+      <bpmndi:BPMNShape id="BPMNShape_17nyg3t" bpmnElement="Activity_0q500dv" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <omgdc:Bounds x="2200" y="840" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
@@ -391,6 +388,12 @@
         <omgdc:Bounds x="1792" y="742" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <omgdc:Bounds x="1775" y="723" width="71" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_075sv8c" bpmnElement="DataObjectReference_1k2u801" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <omgdc:Bounds x="1652" y="735" width="36" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1636" y="685" width="67" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_0gkk1xd" bpmnElement="Flow_09a6t8b">
@@ -465,6 +468,19 @@
           <omgdc:Bounds x="1824" y="814" width="51" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataInputAssociation_00wcvqt_di" bpmnElement="DataInputAssociation_00wcvqt">
+        <omgdi:waypoint x="1670" y="785" />
+        <omgdi:waypoint x="1670" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_19sncz3_di" bpmnElement="Event_16pk9w3">
+        <omgdc:Bounds x="1382" y="1192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1373" y="1235" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0x94fyx_di" bpmnElement="Activity_11zffyk">
+        <omgdc:Bounds x="1150" y="1170" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0l00m9w_di" bpmnElement="Event_1vytrt0">
         <omgdc:Bounds x="1012" y="1072" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -534,12 +550,6 @@
           <omgdc:Bounds x="647" y="285" width="67" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1lj6mng_di" bpmnElement="Event_1lj6mng">
-        <omgdc:Bounds x="3292" y="192" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="3275" y="235" width="71" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_02pxxa2_di" bpmnElement="Event_039dwae">
         <omgdc:Bounds x="2292" y="192" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -557,6 +567,12 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0j10jhw_di" bpmnElement="Gateway_0j10jhw" isMarkerVisible="true">
         <omgdc:Bounds x="3205" y="185" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1lj6mng_di" bpmnElement="Event_1lj6mng">
+        <omgdc:Bounds x="3292" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="3275" y="235" width="71" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1g4ke64_di" bpmnElement="Activity_1yuhg6b" isExpanded="true">
         <omgdc:Bounds x="2760" y="110" width="410" height="200" />
@@ -636,14 +652,14 @@
           <omgdc:Bounds x="348" y="522" width="86" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="BPMNEdge_0kdijad" bpmnElement="Association_0ftqdyy">
-        <omgdi:waypoint x="2269" y="840" />
-        <omgdi:waypoint x="2313" y="815" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0p936z0_di" bpmnElement="Association_0p936z0">
-        <omgdi:waypoint x="1249" y="1175" />
-        <omgdi:waypoint x="1270" y="1160" />
-      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_0fl6r01" bpmnElement="TextAnnotation_0b9de38">
+        <omgdc:Bounds x="2300" y="745" width="200" height="70" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0xumt1v_di" bpmnElement="TextAnnotation_0xumt1v">
+        <omgdc:Bounds x="1270" y="1110" width="100" height="55" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0uil9hy_di" bpmnElement="DataOutputAssociation_0uil9hy">
         <omgdi:waypoint x="990" y="840" />
         <omgdi:waypoint x="990" y="485" />
@@ -694,6 +710,14 @@
         <omgdi:waypoint x="389" y="220" />
         <omgdi:waypoint x="389" y="185" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_0kdijad" bpmnElement="Association_0ftqdyy">
+        <omgdi:waypoint x="2269" y="840" />
+        <omgdi:waypoint x="2313" y="815" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0p936z0_di" bpmnElement="Association_0p936z0">
+        <omgdi:waypoint x="1249" y="1175" />
+        <omgdi:waypoint x="1270" y="1160" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_16kr3sk_di" bpmnElement="Flow_16kr3sk">
         <omgdi:waypoint x="550" y="300" />
         <omgdi:waypoint x="550" y="862" />
@@ -708,14 +732,6 @@
         <omgdi:waypoint x="2920" y="250" />
         <omgdi:waypoint x="2920" y="862" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="BPMNShape_0fl6r01" bpmnElement="TextAnnotation_0b9de38">
-        <omgdc:Bounds x="2300" y="745" width="200" height="70" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0xumt1v_di" bpmnElement="TextAnnotation_0xumt1v">
-        <omgdc:Bounds x="1270" y="1110" width="100" height="55" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </definitions>
